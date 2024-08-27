@@ -1,5 +1,5 @@
 import { auth, currentUser } from '@clerk/nextjs/server'
-
+import  Link  from 'next/link'
 export async function Page() {
   const userInfo = auth()
 
@@ -17,6 +17,6 @@ export async function Page() {
 export default function Home() {
   Page();
   return (
-    <div>Hi</div>
+    <div><button href='\sign-in'><Link href='\sign-in'>Sign in</Link></button></div>
   );
 }
